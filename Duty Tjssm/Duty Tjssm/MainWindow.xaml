@@ -1,0 +1,36 @@
+﻿<Window x:Class="Duty_Tjssm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="322" VerticalAlignment="Top" Width="302">
+            <TabItem Header="첫장">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="둘째장">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+        <GroupBox Header="당직 수행 날짜" HorizontalAlignment="Left" Margin="307,25,0,0" VerticalAlignment="Top" Height="64" Width="201">
+            <Grid Margin="0,0,0,-0.4">
+                <DatePicker Name="dutyDataPicker"  HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0,10,0,0"/>
+                <CheckBox Name="dutyTimeCheckBox" Content="주간 당직"  HorizontalAlignment="Left" Margin="109,14,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="307,104,0,0" VerticalAlignment="Top" Height="84" Width="201">
+            <Grid HorizontalAlignment="Left" Height="66" Margin="0,0,-3,-22.8" VerticalAlignment="Top" Width="191">
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Best" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="50,7,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Name="txtBest"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Worst" VerticalAlignment="Top" RenderTransformOrigin="0.625,1.625"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="50,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Name="txtWorst"/>
+                <Button Content="입력" HorizontalAlignment="Left" Margin="152,10,0,0" VerticalAlignment="Top" Width="29" Height="46" Name="btnNameinput"/>
+            </Grid>
+        </GroupBox>
+
+
+
+
+    </Grid>
+</Window>

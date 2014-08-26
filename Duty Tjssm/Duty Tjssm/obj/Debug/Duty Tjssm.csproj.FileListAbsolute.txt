@@ -1,0 +1,28 @@
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\MainWindow.baml
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\MainWindow.g.cs
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\App.g.cs
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm_MarkupCompile.cache
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm.g.resources
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty_Tjssm.Properties.Resources.resources
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm.csproj.GenerateResource.Cache
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Duty Tjssm.exe.config
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Duty Tjssm.exe
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Duty Tjssm.pdb
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.AccessControl.DLL
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Analytics.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Apps.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Blogger.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Calendar.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Client.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Contacts.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.ContentForShopping.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Documents.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Extensions.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Photos.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.Spreadsheets.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.WebmasterTools.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Google.GData.YouTube.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm.exe
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm.pdb
+C:\Users\TJSSM\Documents\Visual Studio 2013\Projects\Duty Tjssm\Duty Tjssm\obj\Debug\Duty Tjssm.csprojResolveAssemblyReference.cache
