@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Duty_Tjssm.PhotoInsertModule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="217" d:DesignWidth="338">
+    <Grid Background="Black" Height="217" Width="338">
+        <Canvas Name="mainCanvas"  MouseUp="mainCanvas_MouseUp" Height="217" Width="338" Margin="0">
+            <Canvas.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="Resource/noImg.png"/>
+            </Canvas.Background>
+            <Canvas Height="25" Canvas.Left="299" Canvas.Top="10" Width="30" MouseUp="Canvas_MouseUp">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="Resource/roatate2crop.png" Stretch="Uniform"/>
+                </Canvas.Background>
+            </Canvas>
+            <Canvas Height="25" Canvas.Left="264" Canvas.Top="10" Width="30" MouseUp="Canvas_MouseUp_1">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="Resource/rotate.png" Stretch="Uniform"/>
+                </Canvas.Background>
+            </Canvas>
+            <Canvas Height="25" Canvas.Left="299" Canvas.Top="182" Width="30" MouseUp="Canvas_MouseUp_2">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="Resource/rotate.png" Stretch="Uniform"/>
+                </Canvas.Background>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</UserControl>
