@@ -19,3 +19,24 @@ C:\Users\TJSSM\Documents\GitHub\tjssmduty\Duty Tjssm\obj\Release\Duty_Tjssm.Prop
 C:\Users\TJSSM\Documents\GitHub\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.csproj.GenerateResource.Cache
 C:\Users\TJSSM\Documents\GitHub\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.exe
 C:\Users\TJSSM\Documents\GitHub\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.pdb
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Duty Tjssm.exe.config
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.exe
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.pdb
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Duty Tjssm.exe
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Duty Tjssm.pdb
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Google.GData.Client.dll
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Google.GData.Extensions.dll
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Google.GData.Spreadsheets.dll
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\bin\Release\Newtonsoft.Json.dll
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.csprojResolveAssemblyReference.cache
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\PhotoInsertModule.baml
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\MainWindow.g.cs
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\PhotoInsertModule.g.cs
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\App.g.cs
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm_MarkupCompile.cache
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm_MarkupCompile.lref
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\MainWindow.baml
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.g.resources
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty_Tjssm.Properties.Resources.resources
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Release\Duty Tjssm.csproj.GenerateResource.Cache

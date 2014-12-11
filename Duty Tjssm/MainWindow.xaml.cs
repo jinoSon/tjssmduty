@@ -16,6 +16,7 @@ using Google.GData.Client;
 using Google.GData.Spreadsheets;
 using System.IO;
 using Microsoft.Win32;
+using System.ComponentModel;
 
 namespace Duty_Tjssm
 {
@@ -24,10 +25,22 @@ namespace Duty_Tjssm
     /// </summary>
     public partial class MainWindow : Window
     {
-        GspConnector gCtest;
         clipboard dutyTextClip;
+        GspConnector gCtest;
+        BackgroundWorker _backgroundWorker;
+        void createGspConnector(){
+            _backgroundWorker = new BackgroundWorker();
+            _backgroundWorker.DoWork += _backgroundWorker_DoWork;
+            _backgroundWorker.RunWorkerAsync();
+        }
+
+        void _backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            gCtest = new GspConnector();
+        }
         public MainWindow()
         {
+            
             InitializeComponent();
             createGspConnector();
             this.Loaded += MainWindow_Loaded;
@@ -118,13 +131,6 @@ namespace Duty_Tjssm
             
         }
 
-        void createGspConnector()
-        {
-            gCtest = new GspConnector();
-            
-
-
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

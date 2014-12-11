@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Duty_Tjssm" x:Class="Duty_Tjssm.MainWindow"
-        Title="MainWindow"  Width="982.555" Height="837.6" MinHeight="700" MinWidth="982" MaxWidth="982">
+        Title="MainWindow"  Width="982.555" Height="837.6" MinHeight="500" MinWidth="982" MaxWidth="982">
     <Grid Margin="0,0,4,160">
         <ScrollViewer Name="mainScroll" HorizontalAlignment="Left" Width="739" Margin="0,0,0,-158.4">
             <Canvas Width="720" Height="2048" Name="mainCanvas" >
@@ -25,16 +25,16 @@
 
             </Canvas>
         </ScrollViewer>
-        <ScrollViewer  HorizontalAlignment="right" Width="228" Margin="0,0,0,-158.4">
-            <Grid Height="800">
-                <GroupBox Header="당직 수행 날짜" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Height="64" Width="199">
+        <ScrollViewer  HorizontalAlignment="right" Width="228" Margin="0,0,0,-148.4">
+            <Grid >
+                <GroupBox Header="당직 수행 날짜" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Height="64" Width="199">
                     <Grid Margin="0,0,0,-0.4">
                         <DatePicker x:Name="dutyDataPicker"  HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0,10,0,0"/>
                         <CheckBox x:Name="dutyTimeCheckBox" Content="주간 당직"  HorizontalAlignment="Left" Margin="109,14,0,0" VerticalAlignment="Top"/>
 
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="베스트워스트" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Height="84" Width="201">
+                <GroupBox Header="베스트워스트" HorizontalAlignment="Left" Margin="5,72,0,0" VerticalAlignment="Top" Height="84" Width="201">
                     <Grid HorizontalAlignment="Left" Height="66" Margin="0,0,-3,-22.8" VerticalAlignment="Top" Width="191">
                         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Best" VerticalAlignment="Top"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="50,7,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" x:Name="txtBest"/>
@@ -44,7 +44,7 @@
 
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="미션" HorizontalAlignment="Left" Margin="0,155,0,0" VerticalAlignment="Top" Height="110" Width="199">
+                <GroupBox Header="미션" HorizontalAlignment="Left" Margin="5,155,0,0" VerticalAlignment="Top" Height="110" Width="199">
                     <Grid Margin="0,0,0.4,-0.4">
 
 
@@ -55,7 +55,7 @@
                         <Button Name="btnMission" Content="입력" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="166" />
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="기타등등" HorizontalAlignment="Left" Margin="0,270,0,0" VerticalAlignment="Top" Height="520" Width="201">
+                <GroupBox Header="기타등등" HorizontalAlignment="Left" Margin="5,270,0,0" VerticalAlignment="Top" Height="520" Width="201">
                     <Grid HorizontalAlignment="Left" Margin="0,-6,-7,-2.6" Width="195">
                         <Label Content="2층" HorizontalAlignment="Left" Margin="0,12,0,0" VerticalAlignment="Top"/>
                         <Label Content="체단실" HorizontalAlignment="Left" Margin="0,38,0,0" VerticalAlignment="Top"/>
