@@ -67,3 +67,4 @@ C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\MainWindow.baml
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.g.resources
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty_Tjssm.Properties.Resources.resources
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.csproj.GenerateResource.Cache
+C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.csprojResolveAssemblyReference.cache

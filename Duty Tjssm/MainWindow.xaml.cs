@@ -59,6 +59,9 @@ namespace Duty_Tjssm
         void btnNameinput_Click(object sender, RoutedEventArgs e)
         {
             gCtest.writeData(dutyDataPicker.SelectedDate.Value, (bool)dutyTimeCheckBox.IsChecked, txtBest.Text, txtWorst.Text);
+            this.diTxtBest.Text =  this.txtBest.Text;
+            this.diTxtWorst.Text = this.txtWorst.Text;
+
             MessageBox.Show("설정되었습니다.");
         }
 
