@@ -6,25 +6,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="217" d:DesignWidth="338">
     <Grid Background="Black" Height="217" Width="338">
-        <Canvas Name="mainCanvas"  MouseUp="mainCanvas_MouseUp" Height="217" Width="338" Margin="0">
-            <Canvas.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="Resource/noImg.png"/>
-            </Canvas.Background>
-            <Canvas Height="25" Canvas.Left="299" Canvas.Top="10" Width="30" MouseUp="Canvas_MouseUp">
+        <Canvas Name="mainCanvas" Height="217" Width="338" Margin="0" MouseLeftButtonDown="mainCanvas_MouseLeftButtonDown" ToolTip="이미지 삽입">
+            <Canvas Height="25" Canvas.Left="299" Canvas.Top="10" Width="30" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" ToolTip="이미지 회전" Panel.ZIndex="100">
                 <Canvas.Background>
                     <ImageBrush ImageSource="Resource/roatate2crop.png" Stretch="Uniform"/>
                 </Canvas.Background>
-            </Canvas>
-            <Canvas Height="25" Canvas.Left="264" Canvas.Top="10" Width="30" MouseUp="Canvas_MouseUp_1">
+            </Canvas >
+            <Canvas Height="25" Canvas.Left="299" Canvas.Top="182" Width="30" MouseLeftButtonDown="Canvas_MouseLeftButtonDown_2" ToolTip="초기화" Panel.ZIndex="100">
                 <Canvas.Background>
                     <ImageBrush ImageSource="Resource/rotate.png" Stretch="Uniform"/>
                 </Canvas.Background>
             </Canvas>
-            <Canvas Height="25" Canvas.Left="299" Canvas.Top="182" Width="30" MouseUp="Canvas_MouseUp_2">
-                <Canvas.Background>
-                    <ImageBrush ImageSource="Resource/rotate.png" Stretch="Uniform"/>
-                </Canvas.Background>
-            </Canvas>
+            <Image Panel.ZIndex="50" Stretch="Uniform" Name="img1" Canvas.Left="0" Canvas.Top="0" Width="338" Height="217" Source="Resource/noImg.png" RenderOptions.BitmapScalingMode="Fant"/>
+            <Image Stretch="Fill" Name="img2" Canvas.Left="169" Canvas.Top="108" Width="169" Height="108" Source="Resource/Noimage.png" RenderOptions.BitmapScalingMode="Fant"/>
+            <Image Stretch="Fill" Name="img3" Canvas.Top="0" Canvas.Left="169" Width="169" Height="108" Source="Resource/Noimage.png" RenderOptions.BitmapScalingMode="Fant"/>
+            <Image Stretch="Fill" Name="img4" Canvas.Top="108" Canvas.Left="0" Width="169" Height="108" Source="Resource/Noimage.png" RenderOptions.BitmapScalingMode="Fant"/>
         </Canvas>
     </Grid>
 </UserControl>

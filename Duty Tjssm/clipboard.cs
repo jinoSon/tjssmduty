@@ -10,32 +10,32 @@ namespace Duty_Tjssm
 {
     class clipboard
     {
-        Dictionary<String, TextBox > dictionaryMap;
+        Dictionary<String, TextBox> dictionaryMap;
         public clipboard()
         {
             dictionaryMap = new Dictionary<string, TextBox>();
         }
-
-        public void insertTextBox(TextBox input, String where){
+        public void insertTextBox(TextBox input, String where)
+        {
             dictionaryMap.Add(where, input);
         }
-        public void insertString(String where){
+        public void insertString(String where)
+        {
             TextBox tm = new TextBox();
             tm.Text = where;
             insertTextBox(tm, where);
         }
-
-        public void setClipboardText(){
+        public void setClipboardText()
+        {
             string result = mergeString();
             //클립보드에 result 삽입
             Clipboard.SetText(result);
         }
-
-
         public string mergeString()
         {
             string result = "";
-            foreach(KeyValuePair<String, TextBox> t in  dictionaryMap){
+            foreach (KeyValuePair<String, TextBox> t in dictionaryMap)
+            {
                 string temp = "";
 
                 if (t.Key.Equals("2층"))
@@ -58,7 +58,7 @@ namespace Duty_Tjssm
                 }
                 else
                 {
-                    temp += "# " + t.Key+" : " + t.Value.Text + "\n";
+                    temp += "# " + t.Key + " : " + t.Value.Text + "\n";
                 }
                 result += temp;
             }
@@ -66,8 +66,8 @@ namespace Duty_Tjssm
 
             return result;
         }
-        public string getUseA4(){
-            string result = "";
+        public string getUseA4()
+        {
             TextBox baseTb = dictionaryMap["기준매수"];
             TextBox cuTb = dictionaryMap["현재매수"];
             int baseInt, cuInt;
@@ -81,12 +81,12 @@ namespace Duty_Tjssm
             {
                 return "숫자가 아니네요";
             }
-            
-            return (baseInt-cuInt).ToString();
+
+            return (baseInt - cuInt).ToString();
 
         }
 
-       
+
 
     }
 }

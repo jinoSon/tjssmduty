@@ -121,21 +121,12 @@
   <ItemGroup>
     <Resource Include="Resource\1.png" />
     <Resource Include="Resource\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\rotate.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\noImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\roatate2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resource\roatate2crop.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\dutyBG.png" />
+    <Resource Include="Resource\Noimage.png" />
+    <Resource Include="Resource\noImg.png" />
+    <Resource Include="Resource\roatate2.png" />
+    <Resource Include="Resource\roatate2crop.png" />
+    <Resource Include="Resource\rotate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

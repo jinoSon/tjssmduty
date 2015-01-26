@@ -21,28 +21,22 @@ namespace Duty_Tjssm
     /// </summary>
     public partial class PhotoInsertModule : UserControl
     {
-        //int picNum = 0;
         double rotateAngle = 0;
-        BitmapImage bitmap = null;          //현재 보이는 이미지
         RotateTransform photoRotate = new RotateTransform(90);
         List<BitmapImage> bitmapList = new List<BitmapImage>();
-        List<BitmapImage> resultBitmapList = new List<BitmapImage>();
 
         public PhotoInsertModule()
         {
             InitializeComponent();
         }
-
-        private void Canvas_MouseUp(object sender, MouseButtonEventArgs e)
+        private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (this.bitmapList.Count == 1)
             {
-                ImageBrush tempBrush = (ImageBrush)mainCanvas.Background;
                 this.rotateAngle += 90;
                 this.rotateAngle %= 360;
-                if (bitmap != null)
+                if (bitmapList[0] != null)
                 {
-                    //tempBrush.Transform = new RotateTransform(rotateAngle, bitmap.PixelWidth*0.5, bitmap.PixelHeight*0.5);
                     TransformedBitmap myRotatedBitmapSource = new TransformedBitmap();
 
                     // BitmapSource objects like TransformedBitmap can only have their properties
@@ -51,12 +45,12 @@ namespace Duty_Tjssm
 
                     // Use the BitmapSource object defined above as the source for this BitmapSource.
                     // This creates a "chain" of BitmapSource objects which essentially inherit from each other.
-                    myRotatedBitmapSource.Source = bitmap;
+                    myRotatedBitmapSource.Source = bitmapList[0];
 
                     // Flip the source 90 degrees.
                     myRotatedBitmapSource.Transform = new RotateTransform(rotateAngle);
                     myRotatedBitmapSource.EndInit();
-                    mainCanvas.Background = new ImageBrush(myRotatedBitmapSource);
+                    img1.Source = myRotatedBitmapSource;
                 }
                 else
                 {
@@ -65,11 +59,12 @@ namespace Duty_Tjssm
             }
             e.Handled = true;
         }
+
         private void fileOpen()
         {
             rotateAngle = 0;
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            
+
             dlg.FileName = "Images";
             dlg.DefaultExt = ".jpg";
             dlg.Filter = "JPEG |*.jpg|  Png |*.png| GIF |*.gif";
@@ -79,15 +74,12 @@ namespace Duty_Tjssm
 
             if (result == true)
             {
-                this.resultBitmapList.Clear();
                 if (dlg.FileNames.Length + bitmapList.Count > 4)
                 {
-                    this.bitmapList.Clear();
-                    
+                    reFreshImage();
                 }
                 foreach (string selectedFileName in dlg.FileNames)
                 {
-                    //string selectedFileName = dlg.FileName;
                     bool _check = true;
                     foreach (BitmapImage _bmp in bitmapList)
                     {
@@ -96,175 +88,89 @@ namespace Duty_Tjssm
                             _check = false;
                             break;
                         }
-                        
+
                     }
                     if (_check)
                     {
                         BitmapImage insertbitmap = new BitmapImage();
-
                         insertbitmap.BeginInit();
-
                         insertbitmap.UriSource = new Uri(selectedFileName);
-
                         insertbitmap.EndInit();
-
                         this.bitmapList.Add(insertbitmap);
                     }
                 }
-                displayImageDecord();
-                
-                this.mainCanvas.Background = new ImageBrush(bitmap);
+                mergeImageDecord();
             }
         }
-        private void displayImageDecord()
+
+        private void mergeImageDecord()
         {
-            List<int> aspectRatioHeight = new List<int>();
-            int i = 0;
-            
-            foreach(BitmapImage _tmp in bitmapList){
-                BitmapImage insertbitmap = new BitmapImage();
-
-                insertbitmap.BeginInit();
-                insertbitmap.UriSource = _tmp.UriSource;
-
-                if(_tmp.PixelWidth > _tmp.PixelHeight){
-                    insertbitmap.DecodePixelHeight = (int)this.ActualHeight;
-                    insertbitmap.DecodePixelWidth = (int)this.ActualWidth;
-                }
-                else{
-                    insertbitmap.DecodePixelHeight = (int)this.ActualHeight;
-                    insertbitmap.DecodePixelWidth = (int)this.ActualWidth / 2;
-                    aspectRatioHeight.Add(i);
-                }
-                insertbitmap.EndInit();
-
-                resultBitmapList.Add(insertbitmap);
-                i++;
-               
-            }
-            mergeImageDecord(aspectRatioHeight);
-           
-        }
-        private void mergeImageDecord(List<int> _tList){
-            int imgWidth = (int)this.ActualWidth;
-            int imgHeight = (int)this.ActualHeight;
-            DrawingVisual drawingVisual = new DrawingVisual();
-            RenderTargetBitmap bmp;
-            using (DrawingContext drawingContext = drawingVisual.RenderOpen())
+            if (bitmapList.Count == 1)
             {
-                
-                if (resultBitmapList.Count == 1)
+                img1.Source = bitmapList[0];
+            }
+            else
+            {
+                img1.Width = 169;
+                img1.Height = 108;
+                img1.Source = bitmapList[0];
+                img2.Stretch = Stretch.Uniform;
+                img2.Source = bitmapList[1];
+                if (bitmapList.Count >= 3)
                 {
-                    drawingContext.DrawImage(resultBitmapList[0], new Rect(0, 0, imgWidth*2, imgHeight*2));
+                    img3.Stretch = Stretch.Uniform;
+                    img3.Source = bitmapList[2];
                 }
-                else
+                if (bitmapList.Count >= 4)
                 {
-                    
-                    drawingContext.DrawImage(resultBitmapList[0], new Rect(0, 0, imgWidth, imgHeight));
-                    drawingContext.DrawImage(resultBitmapList[1], new Rect(imgWidth, imgHeight, imgWidth, imgHeight));
-                    if (resultBitmapList.Count >= 3)
-                    {
-                        drawingContext.DrawImage(resultBitmapList[2], new Rect(0, imgHeight,  imgWidth, imgHeight));
-                    }
-                    if (resultBitmapList.Count >= 4)
-                    {
-                        drawingContext.DrawImage(resultBitmapList[3], new Rect(imgWidth, 0, imgWidth, imgHeight));
-                    }
+                    img4.Stretch = Stretch.Uniform;
+                    img4.Source = bitmapList[3];
                 }
-
-                
-                
-                
             }
-            //*/
-            bmp = new RenderTargetBitmap(imgWidth * 2, imgHeight * 2, 96, 96, PixelFormats.Pbgra32);
-            bmp.Render(drawingVisual);
-            bitmap = renderToBitmapImage(bmp);
         }
-        /*/
-        private void mergeImage(BitmapImage _inserBitmap)
-        {
 
-            // Draws the images into a DrawingVisual component
-           RenderTargetBitmap bmp;
-            switch (this.picNum)
-            {
-                case 1: // 이미지 2개로 만들 때
-                case 2:
-                    
-                       bmp = mergeDrawVisual(_inserBitmap);
-                       mainCanvas.Background = new ImageBrush();
-                       renderToBitmapImage(bmp);
-                       this.mainCanvas.Background = new ImageBrush(bitmap);
-                       this.picNum++;
+        //private BitmapImage renderToBitmapImage(RenderTargetBitmap _temp)
+        //{
+        //    var bitmapEncoder = new PngBitmapEncoder();
+        //    bitmapEncoder.Frames.Add(BitmapFrame.Create(_temp));
+        //    BitmapImage _tmpBitmap;
+        //    using (var stream = new MemoryStream())
+        //    {
+        //        bitmapEncoder.Save(stream);
+        //        stream.Seek(0, SeekOrigin.Begin);
+        //        _tmpBitmap = new BitmapImage();
+        //        _tmpBitmap.BeginInit();
+        //        _tmpBitmap.CacheOption = BitmapCacheOption.OnLoad;
+        //        _tmpBitmap.StreamSource = stream;
+        //        _tmpBitmap.EndInit();
+        //    }
+        //    return _tmpBitmap;
+        //}
 
-                    break;
-                
-                case 4: // 이미지 3개로 만들 때
-                    break;
-
-
-            }
-           
-        }
-        */
-        /*/
-        private RenderTargetBitmap mergeDrawVisual(BitmapImage _inserBitmap)
-        {
-            int imgWidth = bitmap.PixelWidth + _inserBitmap.PixelWidth;
-            int imgHeight = bitmap.PixelHeight + _inserBitmap.PixelHeight;
-            DrawingVisual drawingVisual = new DrawingVisual();
-            using (DrawingContext drawingContext = drawingVisual.RenderOpen())
-            {
-                drawingContext.DrawImage(bitmap, new Rect(0, 0, imgWidth * 0.5, imgHeight));
-                drawingContext.DrawImage(_inserBitmap, new Rect(imgHeight * 0.5, 0, imgWidth, imgHeight));
-
-            }
-            RenderTargetBitmap bmp = new RenderTargetBitmap(imgWidth, imgHeight, 96, 96, PixelFormats.Pbgra32);
-            bmp.Render(drawingVisual);
-            return bmp;
-        }*/
-        //*/
-        private BitmapImage renderToBitmapImage(RenderTargetBitmap _temp)
-        {
-            var bitmapEncoder = new PngBitmapEncoder();
-            bitmapEncoder.Frames.Add(BitmapFrame.Create(_temp));
-            BitmapImage _tmpBitmap;
-            using (var stream = new MemoryStream())
-            {
-                bitmapEncoder.Save(stream);
-                stream.Seek(0, SeekOrigin.Begin);
-                _tmpBitmap = new BitmapImage();
-                _tmpBitmap.BeginInit();
-                _tmpBitmap.CacheOption = BitmapCacheOption.OnLoad;
-                _tmpBitmap.StreamSource = stream;
-                _tmpBitmap.EndInit();
-            }
-            return _tmpBitmap;
-        }//*/
-        private void mainCanvas_MouseUp(object sender, MouseButtonEventArgs e)
+        private void mainCanvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
             fileOpen();
         }
-
-        private void Canvas_MouseUp_1(object sender, MouseButtonEventArgs e)
+        private void Canvas_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
+            //초기화 함수 진행            
             e.Handled = true;
-            fileOpen();
-            
-            
+            reFreshImage();
         }
 
-        private void Canvas_MouseUp_2(object sender, MouseButtonEventArgs e)
+        private void reFreshImage()
         {
-            //초기화 함수 진행
-            e.Handled = true;
-            //this.mainCanvas.Background = new ImageBrush(new BitmapImage(new Uri("Resource//noImg.png")));
             this.bitmapList.Clear();
-            this.resultBitmapList.Clear();
-            this.mainCanvas.Background = new SolidColorBrush();
-
+            img1.Width = 338;
+            img1.Height = 217;
+            img1.Source = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "Resource/noImg.png"));
+            img2.Stretch = Stretch.Fill;
+            img3.Stretch = Stretch.Fill;
+            img4.Stretch = Stretch.Fill;
+            img2.Source = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "Resource/Noimage.png")); ;
+            img3.Source = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "Resource/Noimage.png")); ;
+            img4.Source = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "Resource/Noimage.png")); ;
         }
     }
 }

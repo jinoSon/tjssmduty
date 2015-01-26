@@ -68,3 +68,4 @@ C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.g.resources
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty_Tjssm.Properties.Resources.resources
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.csproj.GenerateResource.Cache
 C:\Users\TJSSM\Documents\tjssmduty\Duty Tjssm\obj\Debug\Duty Tjssm.csprojResolveAssemblyReference.cache
+C:\Users\joowoo30\Documents\tjssm_test\Duty Tjssm\bin\Debug\Duty Tjssm.exe.config

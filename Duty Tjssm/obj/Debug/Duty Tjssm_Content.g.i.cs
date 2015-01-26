@@ -8,6 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/dutybg.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/noimage.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/noimg.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/roatate2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/roatate2crop.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resource/rotate.png")]
 
 
